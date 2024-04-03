@@ -11,7 +11,7 @@ import SwiftUI
 struct UNI_PICApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

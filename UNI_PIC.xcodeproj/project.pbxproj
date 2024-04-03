@@ -8,17 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		C653F49A2BBBFEFA002B831B /* UNI_PICApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653F4992BBBFEFA002B831B /* UNI_PICApp.swift */; };
-		C653F49C2BBBFEFA002B831B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653F49B2BBBFEFA002B831B /* ContentView.swift */; };
 		C653F49E2BBBFEFD002B831B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C653F49D2BBBFEFD002B831B /* Assets.xcassets */; };
 		C653F4A12BBBFEFD002B831B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C653F4A02BBBFEFD002B831B /* Preview Assets.xcassets */; };
+		C653F4AD2BBBFF84002B831B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653F4AC2BBBFF84002B831B /* SignInView.swift */; };
+		C653F4B42BBC0F48002B831B /* FrameExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653F4B32BBC0F48002B831B /* FrameExtenstion.swift */; };
+		C653F4B62BBC20D2002B831B /* JsonDecodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653F4B52BBC20D2002B831B /* JsonDecodeExtension.swift */; };
+		C653F4B82BBC24D6002B831B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C653F4B72BBC24D6002B831B /* SignUpView.swift */; };
+		C69AA0632BBD2511005045B4 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AA0622BBD2511005045B4 /* ShareView.swift */; };
+		C69AA0652BBD2522005045B4 /* MyAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AA0642BBD2522005045B4 /* MyAlbumView.swift */; };
+		C69AA0672BBD2529005045B4 /* EditVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AA0662BBD2529005045B4 /* EditVIew.swift */; };
+		C69AA0692BBD25D6005045B4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69AA0682BBD25D6005045B4 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C653F4962BBBFEFA002B831B /* UNI_PIC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNI_PIC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C653F4992BBBFEFA002B831B /* UNI_PICApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNI_PICApp.swift; sourceTree = "<group>"; };
-		C653F49B2BBBFEFA002B831B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C653F49D2BBBFEFD002B831B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C653F4A02BBBFEFD002B831B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C653F4A72BBBFF2D002B831B /* UNI-PIC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "UNI-PIC-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C653F4AC2BBBFF84002B831B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		C653F4B32BBC0F48002B831B /* FrameExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameExtenstion.swift; sourceTree = "<group>"; };
+		C653F4B52BBC20D2002B831B /* JsonDecodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecodeExtension.swift; sourceTree = "<group>"; };
+		C653F4B72BBC24D6002B831B /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C69AA0622BBD2511005045B4 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		C69AA0642BBD2522005045B4 /* MyAlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlbumView.swift; sourceTree = "<group>"; };
+		C69AA0662BBD2529005045B4 /* EditVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVIew.swift; sourceTree = "<group>"; };
+		C69AA0682BBD25D6005045B4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +66,12 @@
 		C653F4982BBBFEFA002B831B /* UNI_PIC */ = {
 			isa = PBXGroup;
 			children = (
-				C653F4992BBBFEFA002B831B /* UNI_PICApp.swift */,
-				C653F49B2BBBFEFA002B831B /* ContentView.swift */,
+				C653F4B22BBC0E37002B831B /* Extenstions */,
+				C653F4AB2BBBFF6F002B831B /* View */,
+				C653F4AA2BBBFF68002B831B /* ViewModel */,
+				C653F4A92BBBFF63002B831B /* Model */,
+				C653F4A82BBBFF53002B831B /* App */,
+				C653F4A72BBBFF2D002B831B /* UNI-PIC-Info.plist */,
 				C653F49D2BBBFEFD002B831B /* Assets.xcassets */,
 				C653F49F2BBBFEFD002B831B /* Preview Content */,
 			);
@@ -65,6 +84,82 @@
 				C653F4A02BBBFEFD002B831B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C653F4A82BBBFF53002B831B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C653F4992BBBFEFA002B831B /* UNI_PICApp.swift */,
+				C69AA0682BBD25D6005045B4 /* MainView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C653F4A92BBBFF63002B831B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C653F4AA2BBBFF68002B831B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C653F4AB2BBBFF6F002B831B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C653F4B12BBC013D002B831B /* SignInPageView */,
+				C653F4B02BBC0122002B831B /* MyAlbumView */,
+				C653F4AF2BBC0112002B831B /* ShareVIew */,
+				C653F4AE2BBC00FF002B831B /* EditView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C653F4AE2BBC00FF002B831B /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				C69AA0662BBD2529005045B4 /* EditVIew.swift */,
+			);
+			path = EditView;
+			sourceTree = "<group>";
+		};
+		C653F4AF2BBC0112002B831B /* ShareVIew */ = {
+			isa = PBXGroup;
+			children = (
+				C69AA0622BBD2511005045B4 /* ShareView.swift */,
+			);
+			path = ShareVIew;
+			sourceTree = "<group>";
+		};
+		C653F4B02BBC0122002B831B /* MyAlbumView */ = {
+			isa = PBXGroup;
+			children = (
+				C69AA0642BBD2522005045B4 /* MyAlbumView.swift */,
+			);
+			path = MyAlbumView;
+			sourceTree = "<group>";
+		};
+		C653F4B12BBC013D002B831B /* SignInPageView */ = {
+			isa = PBXGroup;
+			children = (
+				C653F4B72BBC24D6002B831B /* SignUpView.swift */,
+				C653F4AC2BBBFF84002B831B /* SignInView.swift */,
+			);
+			path = SignInPageView;
+			sourceTree = "<group>";
+		};
+		C653F4B22BBC0E37002B831B /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				C653F4B32BBC0F48002B831B /* FrameExtenstion.swift */,
+				C653F4B52BBC20D2002B831B /* JsonDecodeExtension.swift */,
+			);
+			path = Extenstions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +232,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C653F49C2BBBFEFA002B831B /* ContentView.swift in Sources */,
+				C69AA0652BBD2522005045B4 /* MyAlbumView.swift in Sources */,
+				C69AA0692BBD25D6005045B4 /* MainView.swift in Sources */,
+				C653F4AD2BBBFF84002B831B /* SignInView.swift in Sources */,
+				C69AA0672BBD2529005045B4 /* EditVIew.swift in Sources */,
+				C653F4B82BBC24D6002B831B /* SignUpView.swift in Sources */,
+				C69AA0632BBD2511005045B4 /* ShareView.swift in Sources */,
+				C653F4B42BBC0F48002B831B /* FrameExtenstion.swift in Sources */,
 				C653F49A2BBBFEFA002B831B /* UNI_PICApp.swift in Sources */,
+				C653F4B62BBC20D2002B831B /* JsonDecodeExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +371,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UNI_PIC/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UNI-PIC-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -297,6 +400,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"UNI_PIC/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "UNI-PIC-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
