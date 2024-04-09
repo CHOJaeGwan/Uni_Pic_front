@@ -14,9 +14,16 @@ struct SignUpView: View {
                 TopView()
                     .frame(height: geometry.size.height * 480 / 852)
                     .ignoresSafeArea()
-                loginView()
+                Text("회원 가입").font(.system(size: 20, weight: .bold))
+                loginComponentView()
                     .padding(.top, 40)
                     .background()
+                HStack {
+                    Text("회원가입시 UNI PIC 서비스 이용약관에 동의")
+                    NavigationLink(destination: SignUpView()) {
+                        Text("내용 확인").underline()
+                    }.foregroundColor(.black)
+                }.padding(.top, 40)
             } // VStack
         }
     }
@@ -24,12 +31,11 @@ struct SignUpView: View {
 
 struct signupView: View {
     var body: some View{
-        Text("로그인").font(.system(size: 20, weight: .bold))
+        Text("회원가입").font(.system(size: 20, weight: .bold))
         HStack {
-            Text("아직 계정이 없으신가요?")
-            
+            Text("회원가입시 UNI PIC 서비스 이용약관에 동의")
             NavigationLink(destination: SignUpView()) {
-                Text("회원가입").underline()
+                Text("내용확인").underline()
             }.foregroundColor(.black)
        }
     }

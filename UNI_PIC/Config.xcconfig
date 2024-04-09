@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  UNI_PIC
+//
+//  Created by 조재관 on 2024/04/08.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+
+KAKAO_NATIVE_APP_KEY=8b90ca5c90fb481a211dd71d4a518db5

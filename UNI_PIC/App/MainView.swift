@@ -10,21 +10,19 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView{
-            EditVIew()
+            EditView()
                 .tabItem{
-                    Image("editIcon")
+                    Image(systemName: "square.and.pencil")
                     Text("편집하기")
-                        .foregroundColor(Color("NuetralColor/800"))
                 }
             ShareView()
                 .tabItem{
-                    Image("shareIcon")
+                    Image(systemName: "square.and.arrow.up")
                     Text("공유하기")
-                        .foregroundColor(Color("GradientColor/gradientColorS"))
                 }
             MyAlbumView()
                 .tabItem{
-                    Image("albumIcon")
+                    Image(systemName: "photo")
                     Text("나의 앨범")
                 }
         }

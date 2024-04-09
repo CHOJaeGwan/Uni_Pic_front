@@ -6,12 +6,23 @@
 //
 
 import SwiftUI
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 struct UNI_PICApp: App {
+    init(){
+        let kakaoAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
+        KakaoSDK.initSDK(appKey: kakaoAppKey as! String)
+    }
     var body: some Scene {
         WindowGroup {
-            MainView()
+            // onOpenURL()을 사용해 커스텀 URL 스킴 처리
+            SignInView().onOpenURL(perform: { url in
+                if (AuthApi.isKakaoTalkLoginUrl(url)) {
+                    AuthController.handleOpenUrl(url: url)
+                }
+            })
         }
     }
 }

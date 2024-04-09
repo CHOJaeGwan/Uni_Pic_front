@@ -9,15 +9,24 @@ import SwiftUI
 
 struct SignInView: View {
     var body: some View {
-        GeometryReader { geometry in
-            VStack(spacing: 0){
-                TopView()
-                    .frame(height: geometry.size.height * 480 / 852)
-                    .ignoresSafeArea()
-                loginView()
-                    .padding(.top, 40)
-                    .background()
-            } // VStack
+        NavigationStack{
+            GeometryReader { geometry in
+                VStack(spacing: 0){
+                    TopView()
+                        .frame(height: geometry.size.height * 480 / 852)
+                        .ignoresSafeArea()
+                    Text("로그인").font(.system(size: 20, weight: .bold))
+                    loginComponentView()
+                        .padding(.top, 40)
+                        .background()
+                    HStack {
+                        Text("아직 계정이 없으신가요?")
+                        NavigationLink(destination: SignUpView()) {
+                            Text("회원가입").underline()
+                        }.foregroundColor(.black)
+                    }.padding(.top, 40)
+                } // VStack
+            }
         }
     }
 }
@@ -25,24 +34,6 @@ struct SignInView: View {
 struct TopView: View {
     var body: some View {
         Color("SignInBackgroundColor")
-    }
-}
-
-//struct BottomView: View {
-//    var body: some View {
-//    }
-//}
-
-struct loginView: View {
-    var body: some View{
-        Text("로그인").font(.system(size: 20, weight: .bold))
-        HStack {
-            Text("아직 계정이 없으신가요?")
-            
-            NavigationLink(destination: SignUpView()) {
-                Text("회원가입").underline()
-            }.foregroundColor(.black)
-       }
     }
 }
 
