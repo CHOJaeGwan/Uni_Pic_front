@@ -7,30 +7,36 @@
 
 import SwiftUI
 
-struct MainView: View {
+struct TabView: View {
+    @State private var selectedTab: Tab = .Edit
+    init(){
+        UITabBar.appearance().isHidden = false
+    }
+
     var body: some View {
-        TabView{
-            EditView()
-                .tabItem{
-                    Image(systemName: "square.and.pencil")
-                    Text("편집하기")
+        ZStack{
+            VStack{
+                TabView(selection: $selectedTab){
+                    EditView()
+                        .tag(Tab.Edit)
+                    ShareView()
+                        .tag(Tab.Share)
+                    MyAlbumView()
+                        .tag(Tab.Album)
                 }
-            ShareView()
-                .tabItem{
-                    Image(systemName: "square.and.arrow.up")
-                    Text("공유하기")
-                }
-            MyAlbumView()
-                .tabItem{
-                    Image(systemName: "photo")
-                    Text("나의 앨범")
-                }
+            }
+            VStack{
+                Spacer()
+                CustomTabBar(selectedTab: $selectedTab)
+                    .background().padding(.bottom)
+                    .background(Color.red)
+            }.ignoresSafeArea(.all,edges: .bottom)
         }
     }
 }
 
-struct MainView_Previews: PreviewProvider {
+struct TabView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        TabView()
     }
 }
