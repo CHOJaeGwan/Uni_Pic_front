@@ -6,52 +6,45 @@
 //
 
 import SwiftUI
+import _AuthenticationServices_SwiftUI
 
 struct loginComponentView: View {
     @StateObject var kakaoAuthVm : KakaoAuthVM = KakaoAuthVM()
-    let loginStatus: (Bool) -> String = {isLoggedIn in return isLoggedIn ? "로그인 상태" : "로그아웃 상태"}
-    
+    @StateObject var appleAuthVM : AppleAuthVM =  AppleAuthVM()
+    @Binding var isLoggedIn: Bool
     var body: some View{
         VStack{
             HStack{
-                ZStack{
-                    Circle()
-                        .fill(Color.black)
-                        .frame(width: 44, height: 44)
-                    Image(systemName: "apple.logo")
-                        .foregroundColor(.white)
-                }
-                Spacer()
                 Button(action:{
                     kakaoAuthVm.handleKakaoLogin()
                 }){
                     ZStack{
-                        Circle()
+                        RoundedRectangle(cornerSize: CGSize(width: 10, height: 3))
                             .fill(Color("kakaoColor"))
-                            .frame(width: 44, height: 44)
-                        Image("kakaoLogin")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 30, height: 30)
+                        HStack{
+                            Image("kakaoLogin")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 30, height: 30)
+                            Text("SignIn With Kakao")
+                                .foregroundStyle(Color.black)
+                                .fontWeight(.bold)
+                        }
                     }
                 }
-                Spacer()
-                ZStack{
-                    Circle()
-                        .stroke(Color("NuetralColor_300"), lineWidth:2)
-                        .frame(width: 44, height: 44)
-                    Image("googleLogin")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30)
-                }
-            }.frame(width: CGFloat.screenWidth * 0.5)
+            }
+            .padding(.horizontal)
+            .frame(height: 50)
+            .hCenter()
+        }
+        .onReceive(kakaoAuthVm.$isLoggedIn) { newValue in
+            isLoggedIn = newValue
         }
     }
 }
 
 struct loginComponentView_Previews: PreviewProvider {
     static var previews: some View {
-        loginComponentView()
+        loginComponentView(kakaoAuthVm: KakaoAuthVM(), isLoggedIn: .constant(false))
     }
 }

@@ -9,7 +9,22 @@ import SwiftUI
 
 struct SplashView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("SignInBackgroundColor").ignoresSafeArea(.all)
+            
+            VStack{
+                Image("UNIPICLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 93.52443, height: 105.57655)
+                    .padding()
+                Text("UNIPIC")
+                    .fontWeight(.bold)
+                    .font(.system(size: 40))
+                    .foregroundStyle(LinearGradientStyle.colorGradient)
+                    
+            }
+        }
     }
 }
 

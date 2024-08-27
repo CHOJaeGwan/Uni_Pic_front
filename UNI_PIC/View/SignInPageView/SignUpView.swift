@@ -15,7 +15,6 @@ struct SignUpView: View {
                     .frame(height: geometry.size.height * 480 / 852)
                     .ignoresSafeArea()
                 Text("회원 가입").font(.system(size: 20, weight: .bold))
-                loginComponentView()
                     .padding(.top, 40)
                     .background()
                 HStack {

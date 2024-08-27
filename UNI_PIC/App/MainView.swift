@@ -7,36 +7,43 @@
 
 import SwiftUI
 
-struct TabView: View {
+struct MainView: View {
     @State private var selectedTab: Tab = .Edit
-    init(){
+    @State private var isShowingTabBar: Bool = true // TabBar 가시성 제어 변수 추가
+
+    init() {
         UITabBar.appearance().isHidden = false
     }
 
     var body: some View {
-        ZStack{
-            VStack{
-                TabView(selection: $selectedTab){
-                    EditView()
-                        .tag(Tab.Edit)
-                    ShareView()
-                        .tag(Tab.Share)
-                    MyAlbumView()
-                        .tag(Tab.Album)
+        NavigationStack {
+            ZStack {
+                VStack {
+                    TabView(selection: $selectedTab) {
+                        EditView(isShowingTabBar: $isShowingTabBar)
+                            .tag(Tab.Edit)
+                        ShareView()
+                            .tag(Tab.Share)
+                        MyAlbumView()
+                            .tag(Tab.Album)
+                    }
                 }
+                VStack {
+                    Spacer()
+                    if isShowingTabBar {
+                        CustomTabBar(selectedTab: $selectedTab)
+                            .background().padding(.bottom)
+                    }
+                }
+                .ignoresSafeArea(.all, edges: .bottom)
             }
-            VStack{
-                Spacer()
-                CustomTabBar(selectedTab: $selectedTab)
-                    .background().padding(.bottom)
-                    .background(Color.red)
-            }.ignoresSafeArea(.all,edges: .bottom)
         }
     }
 }
 
-struct TabView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        TabView()
+        MainView()
     }
 }
+

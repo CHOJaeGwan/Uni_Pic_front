@@ -1,18 +1,37 @@
+////
+////  ImageVIew.swift
+////  UNI_PIC
+////
+////  Created by 조재관 on 4/14/24.
+////
 //
-//  ImageVIew.swift
-//  UNI_PIC
+//import SwiftUI
 //
-//  Created by 조재관 on 4/14/24.
+//struct ViewControllerWrapper: UIViewControllerRepresentable {
+//    func makeUIViewController(context: Context) -> ViewController {
+//        return ViewController()
+//    }
+//    
+//    func updateUIViewController(_ uiViewController: ViewController, context: Context) {
+//        // Update the view controller if needed
+//    }
+//}
 //
-
-import SwiftUI
-
-struct ImageVIew: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    ImageVIew()
-}
+//struct ContentView: View {
+//    var body: some View {
+//        VStack {
+//            // Embed the ViewControllerWrapper in SwiftUI view hierarchy
+//            ViewControllerWrapper()
+//                .frame(width: 300, height: 400) // Set the desired size of the embedded view controller
+//        }
+//    }
+//}
+//
+//// ContentView를 미리뷰에 표시하기 위한 코드
+//#if DEBUG
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
+//#endif

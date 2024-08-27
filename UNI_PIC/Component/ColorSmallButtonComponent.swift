@@ -7,12 +7,17 @@
 
 import SwiftUI
 
-struct ColorSmallButtonComponent: View {
+struct SmallColorButtonComponent: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 10)
+            .stroke(LinearGradientStyle.colorGradient, lineWidth: 2)
+            .frame(width: CGFloat.screenWidth * 0.4,
+                   height: 50)
     }
 }
 
-#Preview {
-    ColorSmallButtonComponent()
+struct SmallColorButtonComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        SmallColorButtonComponent()
+    }
 }

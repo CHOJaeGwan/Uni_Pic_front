@@ -36,7 +36,7 @@ struct CustomTabBar: View {
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30, height: 30)
-                            .foregroundStyle(selectedTab == tab ?  LinearGradient(gradient: Gradient(colors: [Color("gradientColorS"), Color("gradientColorE")]), startPoint: .leading, endPoint: .trailing) : LinearGradient(colors: [Color("NuetralColor_200")], startPoint: .leading, endPoint: .trailing))
+                            .foregroundStyle(selectedTab == tab ?  LinearGradient(gradient: Gradient(colors: [Color("gradientColorS"), Color("gradientColorE")]), startPoint: .leading, endPoint: .trailing) : LinearGradient(colors: [Color("NeutralColor_200")], startPoint: .leading, endPoint: .trailing))
                             .onTapGesture {
                                 withAnimation(.easeIn(duration: 0.1)){
                                     selectedTab = tab
@@ -44,7 +44,7 @@ struct CustomTabBar: View {
                             }
                         Text(tab.tabName)
                             .font(.system(size: 15))
-                            .foregroundColor(Color("NuetralColor_800"))
+                            .foregroundColor(Color("NeutralColor_800"))
                     }
                     Spacer()
                 }

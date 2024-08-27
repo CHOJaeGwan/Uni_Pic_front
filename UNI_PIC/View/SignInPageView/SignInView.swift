@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct SignInView: View {
-    @StateObject var kakaoAuthVm = KakaoAuthVM()
+   // @StateObject var kakaoAuthVm = KakaoAuthVM()
     @State private var isloggedIn = false
+
+    
     var body: some View {
         NavigationStack{
             GeometryReader { geometry in
@@ -22,17 +25,13 @@ struct SignInView: View {
                             .ignoresSafeArea()
                         Text("로그인").font(.system(size: 20, weight: .bold))
                             .background().padding(.bottom)
-                        Text("소셜계정으로 UNI PIC을 이용해보세요.")
-                            .foregroundStyle(Color("NuetralColor_500"))
-                        loginComponentView(kakaoAuthVm: kakaoAuthVm, googleAuthVM: GoogleAuthVM(), isLoggedIn: $isloggedIn)
+                        Text("애플 계정으로 UNI PIC을 이용해보세요.")
+                            .foregroundStyle(Color("NeutralColor_500"))
+//                        loginComponentView(kakaoAuthVm: kakaoAuthVm, isLoggedIn: $isloggedIn)
+//                            .padding(.top, 40)
+//                            .background()
+                        AppleLogin(isLoggedIn: $isloggedIn)
                             .padding(.top, 40)
-                            .background()
-                        HStack {
-                            Text("UNI PIC이 처음이신가요?")
-                            NavigationLink(destination: SignUpView()) {
-                                Text("회원가입").underline()
-                            }.foregroundColor(.black)
-                        }.padding(.top, 40)
                     }
                 } // VStack
             }
@@ -48,9 +47,9 @@ struct TopView: View {
                 Text("UNIPIC")
                     .fontWeight(.bold)
                     .font(.system(size: 40))
-                    .foregroundStyle(LinearGradientStyle.colorGradient)
+                    .foregroundStyle(Color.white)
                 Text("AI로 만드는 졸업사진")
-                    .foregroundStyle(LinearGradientStyle.colorGradient)
+                    .foregroundStyle(Color.white)
             }
         }
     }

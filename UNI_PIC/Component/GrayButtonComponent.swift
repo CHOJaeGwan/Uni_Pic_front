@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GrayBottonComponent: View {
+struct GrayButtonComponent: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
             .stroke(LinearGradientStyle.grayGradient, lineWidth: 2)
@@ -17,5 +17,5 @@ struct GrayBottonComponent: View {
 }
 
 #Preview {
-    GrayBottonComponent()
+    GrayButtonComponent()
 }

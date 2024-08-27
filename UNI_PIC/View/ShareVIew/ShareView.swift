@@ -9,7 +9,19 @@ import SwiftUI
 
 struct ShareView: View {
     var body: some View {
-        Text("ShareView")
+        ZStack{
+            Color("NeutralColor_200")
+                .ignoresSafeArea()
+            VStack{
+                Text("UNIPIC")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(Color.white)
+                Text("아직 준비중인 기능입니다.")
+                    .foregroundStyle(Color.white)
+            }
+            
+        }
     }
 }
 

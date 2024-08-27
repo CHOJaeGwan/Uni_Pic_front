@@ -10,7 +10,7 @@ import SwiftUI
 struct ButtonComponent: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 10)
-            .stroke(Color("NuetralColor_800"), lineWidth: 2)
+            .stroke(Color("NeutralColor_800"), lineWidth: 2)
             .frame(width: CGFloat.screenWidth * 0.9,
                    height: 50)
     }

@@ -9,10 +9,15 @@ import SwiftUI
 
 struct GraySmallButtonComponent: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 10)
+            .stroke(LinearGradientStyle.grayGradient, lineWidth: 2)
+            .frame(width: CGFloat.screenWidth * 0.4,
+                   height: 50)
     }
 }
 
-#Preview {
-    GraySmallButtonComponent()
+struct GraySmallButtonComponent_Previews: PreviewProvider {
+    static var previews: some View {
+        GraySmallButtonComponent()
+    }
 }

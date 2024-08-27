@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "7A18B54E-A7EB-4165-A1AA-A7A09BCD8521"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB6AC531-A1FC-4B9C-824F-4B812BAABD14"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UNI_PIC/ViewModel/AppleAuthVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "handleAppleLogin()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB6AC531-A1FC-4B9C-824F-4B812BAABD14 - 99adad243b23a6ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;__C.ASAuthorization, Swift.Error&gt;) -&gt; () in UNI_PIC.AppleAuthVM.handleAppleLogin() -&gt; ()"
+                  moduleName = "UNI_PIC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chojaegwan/Desktop/UNI_PIC/UNI_PIC/ViewModel/AppleAuthVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
+               </Location>
+               <Location
+                  uuid = "BB6AC531-A1FC-4B9C-824F-4B812BAABD14 - 99adad243b23a6ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Result&lt;__C.ASAuthorization, Swift.Error&gt;) -&gt; () in UNI_PIC.AppleAuthVM.handleAppleLogin() -&gt; ()"
+                  moduleName = "UNI_PIC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/chojaegwan/Desktop/UNI_PIC/UNI_PIC/ViewModel/AppleAuthVM.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
